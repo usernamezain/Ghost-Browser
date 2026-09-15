@@ -10,6 +10,7 @@ Ghost Browser is currently in **Pre-Alpha**.
 
 - **Phase 0 (Foundation):** Complete (Forked, rebranded, and upstream telemetry stripped).
 - **Phase 1 (Privacy Core):** Scaffolded (Total Cookie Protection, strict referrers, Arkenfox base, Multi-Profile UI, and High-Contrast Monochromatic Theme implemented in `core/`).
+- **Phase 2 (Ghost Cloak):** Scaffolded (WebGL/Canvas spoofing, Timezone UTC enforcement, Hardware Concurrency spoofing, and Deterministic Profile Identity Generator built in `core/`).
 - **Phase 4 (DevTools):** Scaffolded (Native Fingerprint Auditor and OSINT Notes Panel added to `core/`).
 
 > [!WARNING]
