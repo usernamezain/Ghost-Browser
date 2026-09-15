@@ -1,0 +1,23 @@
+/* Ghost Browser - Monochromatic High-Contrast Baseline */
+:root {
+  --toolbar-bgcolor: #000000 !important;
+  --toolbar-color: #FFFFFF !important;
+  --lwt-accent-color: #000000 !important;
+  --lwt-text-color: #FFFFFF !important;
+  --toolbar-field-background-color: #111111 !important;
+  --toolbar-field-color: #FFFFFF !important;
+  --toolbar-field-focus-background-color: #222222 !important;
+  --toolbar-field-focus-color: #FFFFFF !important;
+  --tab-line-color: #FFFFFF !important;
+  --tab-background-color: #000000 !important;
+  --tab-text-color: #FFFFFF !important;
+  --tab-selected-bgcolor: #222222 !important;
+  --tab-selected-textcolor: #FFFFFF !important;
+  --chrome-background-color: #000000 !important;
+  --chrome-color: #FFFFFF !important;
+}
+
+#nav-bar, #TabsToolbar, #PersonalToolbar {
+  background-color: var(--toolbar-bgcolor) !important;
+  color: var(--toolbar-color) !important;
+}

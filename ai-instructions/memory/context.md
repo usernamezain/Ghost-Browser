@@ -113,3 +113,12 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Files touched:** core/src/zen/profiles/*
 **Next agent should:** Proceed to Phase 1 Theming & Visuals.
 **Open questions/flags:** UI is built but not yet bound to a startup window hook to prevent breaking the CI build blindly.
+
+## [2026-09-15] — Phase 1: Theming & Visuals
+**Repo/base commit:** (current state)
+**What changed:** Scaffolded monochromatic baseline userChrome.css and enabled legacy stylesheets by default.
+**Current verified state:** userChrome.css created, pref set.
+**Toolchain/versions:** N/A
+**Files touched:** core/userchrome/userChrome.css, core/prefs/*, core/src/zen/themes/*
+**Next agent should:** Phase 1 is essentially complete. Proceed to Phase 4 (DevTools).
+**Open questions/flags:** None.
