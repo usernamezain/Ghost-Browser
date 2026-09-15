@@ -132,3 +132,13 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Next agent should:** Proceed to final review / README update.
 **Open questions/flags:** Internal Gecko network hooks (nsIHttpChannel) need to be wired for the header inspector later.
 
+
+## [2026-09-15] — Phase 2: Teaching References
+**Repo/base commit:** (current state)
+**What changed:** Cloned Mullvad and Arkenfox references into teaching/ and gitignored them.
+**Current verified state:** teaching/ structure created.
+**Toolchain/versions:** N/A
+**Files touched:** teaching/README.md, .gitignore
+**Next agent should:** Proceed to Phase 2 Mullvad patches review.
+**Open questions/flags:** None.
+
