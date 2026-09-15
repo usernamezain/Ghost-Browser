@@ -2,3 +2,7 @@
 # vim: set filetype=python:
 
 JAR_MANIFESTS += ["jar.mn"]
+
+EXTRA_JS_MODULES.zen.devtools += [
+    "GhostNetworkObserver.sys.mjs",
+]

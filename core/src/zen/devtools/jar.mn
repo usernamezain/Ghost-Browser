@@ -4,3 +4,4 @@ zen.jar:
   content/zen/devtools/fingerprint-auditor.js (fingerprint-auditor.js)
   content/zen/devtools/osint-notes.html (osint-notes.html)
   content/zen/devtools/osint-notes.js (osint-notes.js)
+  content/zen/devtools/GhostNetworkObserver.sys.mjs (GhostNetworkObserver.sys.mjs)

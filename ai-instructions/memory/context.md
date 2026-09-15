@@ -197,3 +197,13 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Files touched:** core/src/zen/themes/*
 **Next agent should:** Proceed to Phase 5 (Docker).
 **Open questions/flags:** None.
+
+## [2026-09-15] — Phase 4: Network & Header Inspector Hooks
+**Repo/base commit:** (current state)
+**What changed:** Scaffolded GhostNetworkObserver.sys.mjs to natively intercept HTTP headers.
+**Current verified state:** JS system module created and registered.
+**Toolchain/versions:** N/A
+**Files touched:** core/src/zen/devtools/*
+**Next agent should:** Proceed to Phase 4 (Part 3) HAR Export, or final polish.
+**Open questions/flags:** None.
+
