@@ -77,3 +77,12 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 - `README.md`
 **Next agent should:** Monitor the first CI build run to verify it completes successfully, particularly monitoring the time taken for a cold Gecko build.
 **Open questions/flags:** Tradeoff flagged: Gecko/Firefox full builds typically take 1-3 hours. GitHub Actions has a 6-hour job timeout. For this public repo, minutes are unlimited, but the 6-hour job timeout could be tight for a cold Gecko build.
+
+## [2026-09-15] — Prompt 2: Rebrand to Ghost Browser
+**Repo/base commit:** (current state)
+**What changed:** Rebranded user-facing strings from Zen to Ghost in the core/ directory.
+**Current verified state:** Replaced "Zen Browser" with "Ghost Browser" across locales, package.json, and other UI text files in core/ while preserving underlying code logic and telemetry strings.
+**Toolchain/versions:** N/A
+**Files touched:** core/locales/*.ftl, core/locales/*.properties, core/package.json, core/surfer.json, core/build/AppDir/zen.desktop, core/.github/workflows/build.yml, core/docs/assets/zen-browser.svg
+**Next agent should:** Proceed with telemetry and default preferences modifications (Prompt 3 or later) now that the basic UI strings are rebranded.
+**Open questions/flags:** Icons are currently renamed or left as is but still visually Zen's logo, need actual new assets. Some internal variables might still be named 'zen' (as intended, to prevent breaking functionality).

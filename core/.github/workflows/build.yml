@@ -192,7 +192,7 @@ jobs:
         if: ${{ inputs.update_version }}
         with:
           commit_message: 🔖 Update version to ${{ steps.data.outputs.version }}
-          commit_user_name: Zen Browser Robot
+          commit_user_name: Ghost Browser Robot
           commit_user_email: zen-browser-auto@users.noreply.github.com
 
   check-release:
@@ -445,7 +445,7 @@ jobs:
           cp configs/branding/${{ inputs.update_branch }}/logo128.png build/AppDir/zen.png && ln -s zen.png build/AppDir/.DirIcon
 
           if [ "${{ inputs.update_branch }}" = "twilight" ]; then
-            sed -i -e 's/Name=Zen Browser/Name=Zen Twilight/g' build/AppDir/zen.desktop
+            sed -i -e 's/Name=Ghost Browser/Name=Zen Twilight/g' build/AppDir/zen.desktop
             sed -i -e 's/StartupWMClass=zen/StartupWMClass=zen-twilight/g' build/AppDir/zen.desktop
           fi
 
@@ -609,7 +609,7 @@ jobs:
         if: ${{ inputs.create_release || inputs.update_branch == 'twilight' }}
         with:
           commit_message: 🚀 Update update manifests
-          commit_user_name: Zen Browser Robot
+          commit_user_name: Ghost Browser Robot
           commit_user_email: zen-browser-auto@users.noreply.github.com
           repository: ./updates-server
 
@@ -731,7 +731,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 🚀 Update releases for Flatpak
-          commit_user_name: Zen Browser Robot
+          commit_user_name: Ghost Browser Robot
           commit_user_email: zen-browser-auto@users.noreply.github.com
 
       - name: Checkout Flatpak repository
@@ -754,7 +754,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "[release]: Update Flatpak manifest"
-          commit_user_name: Zen Browser Robot
+          commit_user_name: Ghost Browser Robot
           commit_user_email: zen-browser-auto@users.noreply.github.com
           repository: ./flatpak
 
@@ -839,7 +839,7 @@ jobs:
           commit-message: Update to version `${{ needs.build-data.outputs.version }}`
           title: Update to version `${{ needs.build-data.outputs.version }}`
           body: |
-            This PR updates the Zen Browser Flatpak package to version ${{ needs.build-data.outputs.version }}.
+            This PR updates the Ghost Browser Flatpak package to version ${{ needs.build-data.outputs.version }}.
 
             @${{ github.actor }} please review and merge this PR.
           branch: update-to-${{ needs.build-data.outputs.version }}
