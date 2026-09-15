@@ -56,20 +56,26 @@ jobs:
 
       # Note: Intentionally omitting actions/cache for objdir, sccache, and npm to ensure a full clean build.
       
+      - name: Clone Zen Browser
+        run: git clone --depth 1 https://github.com/zen-browser/desktop.git zen-browser
+
       - name: npm install
         run: npm install
+        working-directory: zen-browser
 
       - name: npm run init
         run: npm run init
+        working-directory: zen-browser
         
       - name: npm run build
         run: npm run build
+        working-directory: zen-browser
 
       - name: Upload Browser Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ghost-browser-clean-binary-${{ matrix.os }}
+          name: ghost-browser-binary-${{ matrix.os }}
           path: |
-            dist/
-            out/
-            obj-*/dist/bin/
+            zen-browser/dist/
+            zen-browser/out/
+            zen-browser/obj-*/dist/bin/
