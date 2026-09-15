@@ -1,0 +1,4 @@
+EXTRA_JS_MODULES.zen.identity += [
+    'GhostIdentityGenerator.sys.mjs',
+    'GhostIdentityService.sys.mjs',
+]
