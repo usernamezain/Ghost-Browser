@@ -1,0 +1,6 @@
+zen.jar:
+% content zen %content/zen/
+  content/zen/devtools/fingerprint-auditor.html (fingerprint-auditor.html)
+  content/zen/devtools/fingerprint-auditor.js (fingerprint-auditor.js)
+  content/zen/devtools/osint-notes.html (osint-notes.html)
+  content/zen/devtools/osint-notes.js (osint-notes.js)

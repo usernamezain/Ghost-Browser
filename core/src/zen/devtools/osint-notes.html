@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OSINT Workspace</title>
+  <style>
+    :root {
+      --bg-color: #000000;
+      --fg-color: #ffffff;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--fg-color);
+      font-family: monospace;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    h1 {
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--fg-color);
+      padding: 15px 20px;
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .status {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+    textarea {
+      flex: 1;
+      background: var(--bg-color);
+      color: var(--fg-color);
+      border: none;
+      padding: 20px;
+      font-family: monospace;
+      font-size: 1rem;
+      outline: none;
+      resize: none;
+      line-height: 1.5;
+    }
+    textarea::placeholder {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <span>OSINT Notes Panel</span>
+    <span class="status" id="save-status">SAVED</span>
+  </h1>
+  <textarea id="notes-area" placeholder="Enter session OSINT notes here... Content autosaves securely locally."></textarea>
+  <script src="chrome://zen/content/devtools/osint-notes.js"></script>
+</body>
+</html>

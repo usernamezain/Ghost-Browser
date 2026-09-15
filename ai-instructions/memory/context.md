@@ -122,3 +122,13 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Files touched:** core/userchrome/userChrome.css, core/prefs/*, core/src/zen/themes/*
 **Next agent should:** Phase 1 is essentially complete. Proceed to Phase 4 (DevTools).
 **Open questions/flags:** None.
+
+## [2026-09-15] — Phase 4: Native DevTools
+**Repo/base commit:** (current state)
+**What changed:** Scaffolded native Fingerprint Auditor and OSINT Note-Taking Panel.
+**Current verified state:** Tooling UIs created in core/src/zen/devtools/ and packaged in build.
+**Toolchain/versions:** N/A
+**Files touched:** core/src/zen/devtools/*
+**Next agent should:** Proceed to final review / README update.
+**Open questions/flags:** Internal Gecko network hooks (nsIHttpChannel) need to be wired for the header inspector later.
+
