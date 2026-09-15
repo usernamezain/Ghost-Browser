@@ -124,3 +124,19 @@
 
 - name: privacy.userContext.ui.enabled
   value: true
+
+# Phase 1 Privacy Core Preferences
+- name: network.cookie.cookieBehavior
+  value: 5
+
+- name: network.cookie.lifetimePolicy
+  value: 2
+
+- name: privacy.fingerprintingProtection
+  value: true
+
+- name: network.http.referer.XOriginPolicy
+  value: 2
+
+- name: media.peerconnection.enabled
+  value: false

@@ -16,3 +16,8 @@ Every custom `user_pref` Ghost Browser ships, what it does, and why. Arkenfox-st
 | `app.normandy.api_url` | Normandy endpoint | `""` | Medium - disables API |
 | `breakpad.reportURL` | Crash Reporter endpoint | `""` | High - prevents crash uploads |
 | `browser.ping-centre.telemetry` | Ping Centre | `false` | Medium - sends pings |
+| `network.cookie.cookieBehavior` | Total Cookie Protection | `5` | High - Reject track/partition cross-site |
+| `network.cookie.lifetimePolicy` | Cookie Lifetime | `2` | Medium - Accept for session, auto-purge on close |
+| `privacy.fingerprintingProtection` | Fingerprinting Protection (FPP) | `true` | High - FPP instead of RFP (which breaks custom UI) |
+| `network.http.referer.XOriginPolicy` | Referrer Spoofing/Stripping | `2` | Medium - Only send referrer to same origin |
+| `media.peerconnection.enabled` | WebRTC IP Leak Protection | `false` | High - Prevents IP leaks via WebRTC |
