@@ -92,6 +92,10 @@
   locked: true
 
 # Crash Reports
+- name: breakpad.reportURL
+  value: ""
+  locked: true
+
 - name: browser.tabs.crashReporting.sendReport
   value: false
 

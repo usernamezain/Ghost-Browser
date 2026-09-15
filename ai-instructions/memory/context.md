@@ -86,3 +86,13 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Files touched:** core/locales/*.ftl, core/locales/*.properties, core/package.json, core/surfer.json, core/build/AppDir/zen.desktop, core/.github/workflows/build.yml, core/docs/assets/zen-browser.svg
 **Next agent should:** Proceed with telemetry and default preferences modifications (Prompt 3 or later) now that the basic UI strings are rebranded.
 **Open questions/flags:** Icons are currently renamed or left as is but still visually Zen's logo, need actual new assets. Some internal variables might still be named 'zen' (as intended, to prevent breaking functionality).
+
+## [2026-09-15] — Prompt 3: Strip Upstream Telemetry
+**Repo/base commit:** (current state)
+**What changed:** Applied Arkenfox-style telemetry and crash-reporter kill prefs.
+**Current verified state:** Prefs applied. (NOTE: Manual Wireshark verification pending by maintainer).
+**Toolchain/versions:** N/A
+**Files touched:** core/prefs/privatefox/privacy.yaml, docs/preference-reference.md
+**Next agent should:** Proceed to the next Prompt to verify any further networking/privacy requirements or start removing unnecessary bundled code.
+**Open questions/flags:** Safe Browsing and legitimate update checks were left completely untouched to avoid breaking browser functionality. `breakpad.reportURL` was added manually to ensure crash reports never fire even if `browser.tabs.crashReporting.sendReport` were somehow overridden.
+
