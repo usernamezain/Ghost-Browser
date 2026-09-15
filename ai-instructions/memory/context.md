@@ -49,3 +49,31 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 - The machine has only ~10 GB free. A Gecko build needs 30+ GB. The maintainer needs to decide: free up space on this drive, use a different drive/partition, or use a different machine entirely.
 - Linux build was not attempted (no Linux environment available in this session). The roadmap targets Windows + Linux — a Linux build environment will need to be set up separately.
 - Zen Browser's `main` branch is the fork target. No tagged release was used — should the maintainer pin to a specific Zen release tag instead of HEAD for stability? Current HEAD is `644bf48b`.
+
+---
+
+## [2026-09-15] — Prompt 5: Governance Docs
+**Repo/base commit:** Zen Browser `644bf48b6cc4e41f62f39adecd877b0d248e9cab` (2026-09-14)
+**What changed:** Created CONTRIBUTING.md and CODE_OF_CONDUCT.md to outline Phase 0 constraints, the teaching-before-implementing workflow, and honest-marketing discipline. Updated README.md to reference the newly created documents.
+**Current verified state:** Phase 0 governance docs (CONTRIBUTING and CODE_OF_CONDUCT) have been created and are linked in the README. The project culture is clearly defined against making overstated privacy claims and enforces the two-mode architecture respect.
+**Toolchain/versions:** N/A — documentation only
+**Files touched:** 
+- `CONTRIBUTING.md`
+- `CODE_OF_CONDUCT.md`
+- `README.md`
+- `ai-instructions/memory/context.md`
+**Next agent should:** Check if the toolchain blockers identified in Prompt 1 are resolved. If yes, proceed to initial codebase setup/compilation. If no, flag toolchain issues again before any code changes.
+**Open questions/flags:** The 10GB disk space limit and missing toolchain components highlighted in the previous prompt remain active blockers for any real build tasks.
+
+## [2026-09-15] � Prompt 4: CI Build Pipeline
+**Repo/base commit:** Zen Browser `644bf48b6cc4e41f62f39adecd877b0d248e9cab`
+**What changed:** Created GitHub Actions workflow files for the CI build pipeline to bypass local build limits. Included a main build triggered on pushes/PRs to main, and a separate weekly clean-build to catch incremental issues. Both workflows support Windows and Linux.
+**Current verified state:** CI is set up but the first run hasn't happened yet.
+**Toolchain/versions:** GitHub Actions runners using `ubuntu-latest` and `windows-latest`. Toolchain includes Node 21+, Python 3, Rust stable, sccache, and MozillaBuild for Windows.
+**Files touched:**
+- `.github/workflows/build.yml`
+- `.github/workflows/clean-build.yml`
+- `ai-instructions/memory/context.md`
+- `README.md`
+**Next agent should:** Monitor the first CI build run to verify it completes successfully, particularly monitoring the time taken for a cold Gecko build.
+**Open questions/flags:** Tradeoff flagged: Gecko/Firefox full builds typically take 1-3 hours. GitHub Actions has a 6-hour job timeout. For this public repo, minutes are unlimited, but the 6-hour job timeout could be tight for a cold Gecko build.

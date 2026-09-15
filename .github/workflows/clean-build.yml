@@ -1,0 +1,75 @@
+name: Weekly Clean Build
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Every Sunday at midnight
+  workflow_dispatch: # Allow manual trigger
+
+env:
+  SCCACHE_GHA_ENABLED: "true"
+  RUSTC_WRAPPER: "sccache"
+
+jobs:
+  clean-build:
+    name: Clean Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    # IMPORTANT TRADEOFF: A cold Gecko build without cache may take 1-3 hours
+    # and could approach the 6-hour GitHub Actions job timeout limit.
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '21'
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3'
+
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+        
+      - name: Setup sccache
+        uses: mozilla-actions/sccache-action@v0.0.7
+
+      - name: Install MozillaBuild (Windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          Invoke-WebRequest -Uri "https://ftp.mozilla.org/pub/mozilla/libraries/win32/MozillaBuildSetup-Latest.exe" -OutFile "MozillaBuildSetup.exe"
+          Start-Process -FilePath ".\MozillaBuildSetup.exe" -ArgumentList "/S" -Wait
+          echo "c:\mozilla-build\python\Scripts" >> $env:GITHUB_PATH
+          echo "c:\mozilla-build\bin" >> $env:GITHUB_PATH
+
+      # Note: Intentionally omitting actions/cache for objdir, sccache, and npm to ensure a full clean build.
+      
+      - name: npm install
+        run: npm install
+
+      - name: npm run init
+        run: npm run init
+        
+      - name: npm run build
+        run: npm run build
+
+      - name: Upload Browser Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ghost-browser-clean-binary-${{ matrix.os }}
+          path: |
+            dist/
+            out/
+            obj-*/dist/bin/

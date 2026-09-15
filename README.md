@@ -78,7 +78,7 @@ Phase 0 (Foundation) — in progress.
 Folder skeleton and documentation complete. Build environment audited on Windows — blocked by
 missing prerequisites (10.7 GB free disk, need 30 GB; MozillaBuild, sccache, 7-Zip not installed;
 Rust toolchain not configured). See docs/dev-guide/build-environment.md for the full audit and
-fix list. No build has been attempted yet. Fork target: Zen Browser commit 644bf48b (2026-09-14).
+fix list. No build has been attempted yet locally. CI pipeline is set up in GitHub Actions to build on Windows and Linux, but the first run has not happened yet. Fork target: Zen Browser commit 644bf48b (2026-09-14).
 
 
 ## Roadmap Phases
@@ -118,4 +118,4 @@ Open source. MPL 2.0 inherited from upstream, or dual MPL/GPL depending on compo
 
 ## Contributing
 
-CONTRIBUTING.md and CODE_OF_CONDUCT.md will be added in Phase 0. For now, see the GHOST_BROWSER_ROADMAP.md file for the full project roadmap and ai-instructions/ for agent rules.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, development workflow, and the verification protocol for privacy features. All contributors must also adhere to our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), which includes strict rules against overstated security claims. For the full project roadmap and agent rules, see the GHOST_BROWSER_ROADMAP.md file and ai-instructions/.
