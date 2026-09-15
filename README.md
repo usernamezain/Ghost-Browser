@@ -5,9 +5,19 @@ A free, open-source, privacy-hardened desktop browser built on Gecko (Firefox) v
 Ghost Browser gives you real anti-fingerprinting, multi-profile isolation, and full UI customization without needing five different tools duct-taped together.
 
 
-## What This Is
+## 🚧 Current Status
+Ghost Browser is currently in **Pre-Alpha**. 
 
-Ghost Browser is a native PC app (Windows + Linux first, macOS later) that combines:
+- **Phase 0 (Foundation):** Complete (Forked, rebranded, and upstream telemetry stripped).
+- **Phase 1 (Privacy Core):** Scaffolded (Total Cookie Protection, strict referrers, Arkenfox base, Multi-Profile UI, and High-Contrast Monochromatic Theme implemented in `core/`).
+- **Phase 4 (DevTools):** Scaffolded (Native Fingerprint Auditor and OSINT Notes Panel added to `core/`).
+
+> [!WARNING]
+> This browser is currently undergoing structural changes. Do not use this for critical security or privacy tasks yet. Telemetry and fingerprinting mitigations are being actively ported.
+
+## 🛠 Building Ghost Browser
+We build natively using GitHub Actions to overcome local compilation limits.
+Check the **Actions** tab to download the latest artifact binary for your OS (Windows + Linux first, macOS later) that combines:
 
 - Engine-level and config-level anti-fingerprinting (not just an ad-blocker extension)
 - Native multi-profile architecture with per-profile identity (proxy, fingerprint, geolocation)
