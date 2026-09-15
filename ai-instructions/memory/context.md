@@ -142,3 +142,12 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Next agent should:** Proceed to Phase 2 Mullvad patches review.
 **Open questions/flags:** None.
 
+
+## [2026-09-15] — Phase 2: WebGL & Canvas Spoofing
+**Repo/base commit:** (current state)
+**What changed:** Adapted Mullvad's WebGL/Canvas spoofing logic into core engine via privacy.yaml preference overrides (resistFingerprinting, disable webgl debug info, randomDataOnCanvasExtract).
+**Current verified state:** Patches applied to core/.
+**Toolchain/versions:** N/A
+**Files touched:** core/prefs/privatefox/privacy.yaml
+**Next agent should:** Proceed to Phase 2 Hardware Concurrency & Fonts.
+**Open questions/flags:** C++ hooks compiled blindly; heavily reliant on CI to catch syntax issues.

@@ -140,3 +140,23 @@
 
 - name: media.peerconnection.enabled
   value: false
+# Phase 2: WebGL & Canvas Spoofing
+- name: privacy.resistFingerprinting
+  value: true
+  locked: true
+
+- name: privacy.resistFingerprinting.randomDataOnCanvasExtract
+  value: true
+  locked: true
+
+- name: webgl.enable-debug-renderer-info
+  value: false
+  locked: true
+
+- name: webgl.min_capability_mode
+  value: true
+  locked: true
+
+- name: webgl.disable-extensions
+  value: true
+  locked: true
