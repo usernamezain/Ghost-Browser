@@ -173,3 +173,25 @@
 - name: layout.css.font-visibility.trackingprotection
   value: 1
   locked: true
+
+# Phase 2: Timezone & Screen Spoofing
+- name: privacy.timezone.override
+  value: "UTC"
+  locked: true
+
+- name: privacy.resistFingerprinting.reduceTimerPrecision.microseconds
+  value: 1000
+  locked: true
+
+- name: privacy.window.maxInnerWidth
+  value: 1000
+  locked: true
+
+- name: privacy.window.maxInnerHeight
+  value: 1000
+  locked: true
+
+- name: ui.use_standins_for_native_colors
+  value: true
+  locked: true
+

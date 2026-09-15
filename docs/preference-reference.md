@@ -24,3 +24,8 @@ Every custom `user_pref` Ghost Browser ships, what it does, and why. Arkenfox-st
 | `dom.maxHardwareConcurrency` | CPU Core Count Spoofing | `2` | High - Prevents hardware concurrency fingerprinting |
 | `layout.css.font-visibility.standard` | Restrict System Fonts | `1` | High - Prevents cross-site font enumeration |
 | `layout.css.font-visibility.trackingprotection` | Restrict System Fonts (Tracking Protection) | `1` | High - Prevents cross-site font enumeration |
+| `privacy.timezone.override` | Timezone Spoofing | `"UTC"` | High - leaks actual local time |
+| `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` | Timer Precision | `1000` | High - allows timing attacks |
+| `privacy.window.maxInnerWidth` | Window width spoofing | `1000` | High - allows screen resolution fingerprinting |
+| `privacy.window.maxInnerHeight` | Window height spoofing | `1000` | High - allows screen resolution fingerprinting |
+| `ui.use_standins_for_native_colors` | Native Colors Spoofing | `true` | High - exposes OS/system color scheme |

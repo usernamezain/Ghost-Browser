@@ -160,3 +160,13 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Files touched:** core/prefs/privatefox/privacy.yaml, docs/preference-reference.md
 **Next agent should:** Proceed to Phase 2 Timezone & Screen/Window spoofing.
 **Open questions/flags:** None.
+
+## [2026-09-15] - Phase 2: Timezone & Screen Spoofing
+**Repo/base commit:** (current state)
+**What changed:** Spoofed timezone (UTC) and applied screen/window metric standins.
+**Current verified state:** Prefs injected into privacy.yaml.
+**Toolchain/versions:** N/A
+**Files touched:** core/prefs/privatefox/privacy.yaml, docs/preference-reference.md
+**Next agent should:** Proceed to Phase 2 Identity Generator.
+**Open questions/flags:** None.
+
