@@ -6,8 +6,8 @@ on:
   workflow_dispatch: # Allow manual trigger
 
 env:
-  SCCACHE_GHA_ENABLED: "true"
   RUSTC_WRAPPER: "sccache"
+  SCCACHE_DIR: "${{ github.workspace }}/.sccache"
 
 jobs:
   clean-build:
@@ -56,6 +56,11 @@ jobs:
 
       # Note: Intentionally omitting actions/cache for objdir, sccache, and npm to ensure a full clean build.
       
+      - name: Configure Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
       - name: npm install
         run: npm install
         working-directory: core

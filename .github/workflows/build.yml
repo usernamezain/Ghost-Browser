@@ -7,8 +7,8 @@ on:
     branches: [ "main" ]
 
 env:
-  SCCACHE_GHA_ENABLED: "true"
   RUSTC_WRAPPER: "sccache"
+  SCCACHE_DIR: "${{ github.workspace }}/.sccache"
 
 jobs:
   build:
@@ -58,10 +58,15 @@ jobs:
           echo "c:\mozilla-build\python\Scripts" >> $env:GITHUB_PATH
           echo "c:\mozilla-build\bin" >> $env:GITHUB_PATH
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
       - name: Cache sccache
         uses: actions/cache@v4
         with:
-          path: ~/.cache/sccache
+          path: .sccache
           key: ${{ runner.os }}-sccache-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-sccache-
