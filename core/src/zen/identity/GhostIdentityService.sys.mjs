@@ -9,6 +9,15 @@ export const GhostIdentityService = {
       gCurrentProfileId = profileId;
     }
     gCurrentIdentity = GhostIdentityGenerator.generateForProfile(gCurrentProfileId);
+    
+    // Sync with prefs for C++ Engine Hooks
+    const { Services } = ChromeUtils.importESModule("resource://gre/modules/Services.sys.mjs");
+    Services.prefs.setStringPref("ghost.identity.userAgent", gCurrentIdentity.userAgent);
+    Services.prefs.setStringPref("ghost.identity.platform", gCurrentIdentity.platform);
+    Services.prefs.setStringPref("ghost.identity.oscpu", gCurrentIdentity.oscpu);
+    Services.prefs.setIntPref("ghost.identity.hardwareConcurrency", gCurrentIdentity.hardwareConcurrency);
+    Services.prefs.setStringPref("ghost.identity.webGLVendor", gCurrentIdentity.webGLVendor);
+    Services.prefs.setStringPref("ghost.identity.webGLRenderer", gCurrentIdentity.webGLRenderer);
   },
 
   getIdentity() {
