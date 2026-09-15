@@ -73,7 +73,12 @@ ghost-browser/
 
 ## Current Status
 
-Pre-build / architecture phase. The folder skeleton and documentation are being laid down. No implementation code exists yet.
+Phase 0 (Foundation) — in progress.
+
+Folder skeleton and documentation complete. Build environment audited on Windows — blocked by
+missing prerequisites (10.7 GB free disk, need 30 GB; MozillaBuild, sccache, 7-Zip not installed;
+Rust toolchain not configured). See docs/dev-guide/build-environment.md for the full audit and
+fix list. No build has been attempted yet. Fork target: Zen Browser commit 644bf48b (2026-09-14).
 
 
 ## Roadmap Phases
