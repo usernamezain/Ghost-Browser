@@ -160,3 +160,16 @@
 - name: webgl.disable-extensions
   value: true
   locked: true
+
+# Phase 2: Hardware Concurrency & Fonts Spoofing
+- name: dom.maxHardwareConcurrency
+  value: 2
+  locked: true
+
+- name: layout.css.font-visibility.standard
+  value: 1
+  locked: true
+
+- name: layout.css.font-visibility.trackingprotection
+  value: 1
+  locked: true

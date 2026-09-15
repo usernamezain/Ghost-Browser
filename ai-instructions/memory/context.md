@@ -151,3 +151,12 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Files touched:** core/prefs/privatefox/privacy.yaml
 **Next agent should:** Proceed to Phase 2 Hardware Concurrency & Fonts.
 **Open questions/flags:** C++ hooks compiled blindly; heavily reliant on CI to catch syntax issues.
+
+## [2026-09-15] — Phase 2: Hardware Concurrency & Fonts
+**Repo/base commit:** (current state)
+**What changed:** Spoofed hardware concurrency and restricted font visibility.
+**Current verified state:** Prefs injected into privacy.yaml.
+**Toolchain/versions:** N/A
+**Files touched:** core/prefs/privatefox/privacy.yaml, docs/preference-reference.md
+**Next agent should:** Proceed to Phase 2 Timezone & Screen/Window spoofing.
+**Open questions/flags:** None.

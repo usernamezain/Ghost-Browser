@@ -21,3 +21,6 @@ Every custom `user_pref` Ghost Browser ships, what it does, and why. Arkenfox-st
 | `privacy.fingerprintingProtection` | Fingerprinting Protection (FPP) | `true` | High - FPP instead of RFP (which breaks custom UI) |
 | `network.http.referer.XOriginPolicy` | Referrer Spoofing/Stripping | `2` | Medium - Only send referrer to same origin |
 | `media.peerconnection.enabled` | WebRTC IP Leak Protection | `false` | High - Prevents IP leaks via WebRTC |
+| `dom.maxHardwareConcurrency` | CPU Core Count Spoofing | `2` | High - Prevents hardware concurrency fingerprinting |
+| `layout.css.font-visibility.standard` | Restrict System Fonts | `1` | High - Prevents cross-site font enumeration |
+| `layout.css.font-visibility.trackingprotection` | Restrict System Fonts (Tracking Protection) | `1` | High - Prevents cross-site font enumeration |
