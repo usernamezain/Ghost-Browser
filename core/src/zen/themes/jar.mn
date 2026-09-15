@@ -1,0 +1,5 @@
+ghost.jar:
+% content zen-themes %content/zen/themes/
+  content/zen/themes/ghost-theme-marketplace.html   (ghost-theme-marketplace.html)
+  content/zen/themes/ghost-theme-marketplace.js     (ghost-theme-marketplace.js)
+  content/zen/themes/ghost-theme-manager.js         (ghost-theme-manager.js)

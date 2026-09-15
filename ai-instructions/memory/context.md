@@ -179,3 +179,12 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Files touched:** core/src/zen/identity/*
 **Next agent should:** Proceed to Phase 3 (Theming Engine Completion) or Phase 5 (Docker).
 **Open questions/flags:** The generated identity fields need to be wired directly into Gecko's Navigator C++ component in a future compile cycle.
+
+## [2026-09-15] — Phase 3: Theme Marketplace
+**Repo/base commit:** (current state)
+**What changed:** Scaffolded the offline-first Theme Marketplace UI and RFP warning logic.
+**Current verified state:** UIs created in core/src/zen/themes/.
+**Toolchain/versions:** N/A
+**Files touched:** core/src/zen/themes/*
+**Next agent should:** Proceed to Phase 5 (Docker).
+**Open questions/flags:** None.
