@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost Browser - Profiles</title>
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --text-color: #e0e0e0;
+            --accent-color: #ffffff;
+            --border-color: #333333;
+            --hover-color: #1a1a1a;
+            --card-bg: #141414;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+        .profile-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .profile-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-card:hover {
+            border-color: var(--accent-color);
+            background-color: var(--hover-color);
+            transform: translateY(-2px);
+        }
+        .profile-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: var(--border-color);
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .profile-name {
+            font-weight: 500;
+        }
+        .actions-section {
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+            width: 100%;
+        }
+        .actions-section h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .templates {
+            display: flex;
+            gap: 15px;
+        }
+        button {
+            background: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        button:hover {
+            background: var(--text-color);
+            color: var(--bg-color);
+        }
+        .template-btn {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Profile</h1>
+        
+        <div id="profile-list" class="profile-list">
+            <!-- Profiles injected by JS -->
+        </div>
+
+        <div class="actions-section">
+            <h2>Create New Profile</h2>
+            <div class="templates">
+                <button class="template-btn" id="btn-banking">Banking Template</button>
+                <button class="template-btn" id="btn-research">Research Template</button>
+                <button class="template-btn" id="btn-anonymous">Anonymous Template</button>
+            </div>
+        </div>
+    </div>
+    <script src="ghost-profiles.js"></script>
+</body>
+</html>

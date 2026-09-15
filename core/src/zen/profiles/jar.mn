@@ -1,0 +1,4 @@
+zen.jar:
+% content zen %content/zen/
+    content/zen/profiles/ghost-profiles.html (ghost-profiles.html)
+    content/zen/profiles/ghost-profiles.js (ghost-profiles.js)

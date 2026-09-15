@@ -105,3 +105,11 @@ Once all six are confirmed, re-run Prompt 1 to clone Zen and attempt the actual 
 **Next agent should:** Proceed to Phase 1 Multi-Profile system UI.
 **Open questions/flags:** None.
 
+## [2026-09-15] — Phase 1: Multi-Profile UI
+**Repo/base commit:** (current state)
+**What changed:** Scaffolded the native Multi-Profile quick-switch UI (HTML/JS) and hooked it into the build system.
+**Current verified state:** UI files created in core/src/zen/profiles/.
+**Toolchain/versions:** N/A
+**Files touched:** core/src/zen/profiles/*
+**Next agent should:** Proceed to Phase 1 Theming & Visuals.
+**Open questions/flags:** UI is built but not yet bound to a startup window hook to prevent breaking the CI build blindly.
