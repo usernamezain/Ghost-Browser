@@ -1,10 +1,7 @@
-# prefs/
+# Browser Preferences
 
-## Purpose
-Arkenfox-derived default preference sets (`user.js` overrides) that ship with Ghost Browser. These define the privacy-hardening baseline for Ghost Standard mode, including FPP configuration, referrer policy, WebRTC leak prevention, and cookie/storage defaults.
+This directory contains configuration files for Zen. They are divided by folder according to the source / component they belong to and further divided by file according to their purpose.
 
-## Roadmap Phase
-Populated in **Phase 1** (Privacy Core). Depends on studying `teaching/arkenfox-userjs/` first to understand each setting's rationale before importing. Currently empty.
-
-## Constraints
-Per Section 9, Rule 8: every preference change must be logged in `docs/preference-reference.md` as part of the same PR that introduces it. Undocumented `user_pref` entries are not acceptable.
+- `firefox/`: Preferences to override Firefox defaults.
+- `zen/`: Preferences to configure Zen-specific features.
+- `privatefox/` & `fastfox/`: _Some_ of the preferences got extracted from [Betterfox](https://github.com/yokoffing/Betterfox).
