@@ -9,6 +9,11 @@ on:
 env:
   RUSTC_WRAPPER: "sccache"
   SCCACHE_DIR: "${{ github.workspace }}/.sccache"
+  # Prevent GitHub Actions 7GB RAM from OOMing during Rust/C++ compilation
+  CARGO_BUILD_JOBS: "2"
+  MOZ_MAKE_FLAGS: "-j2"
+  RUSTFLAGS: "-C debuginfo=0 -C codegen-units=16"
+  ZEN_GA_DISABLE_PGO: "1"
 
 jobs:
   build:
