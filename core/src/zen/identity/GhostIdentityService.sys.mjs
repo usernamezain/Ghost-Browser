@@ -10,14 +10,16 @@ export const GhostIdentityService = {
     }
     gCurrentIdentity = GhostIdentityGenerator.generateForProfile(gCurrentProfileId);
     
-    // Sync with prefs for C++ Engine Hooks
+    // Sync with native Gecko preferences (requires no C++ patching!)
     const { Services } = ChromeUtils.importESModule("resource://gre/modules/Services.sys.mjs");
-    Services.prefs.setStringPref("ghost.identity.userAgent", gCurrentIdentity.userAgent);
-    Services.prefs.setStringPref("ghost.identity.platform", gCurrentIdentity.platform);
-    Services.prefs.setStringPref("ghost.identity.oscpu", gCurrentIdentity.oscpu);
-    Services.prefs.setIntPref("ghost.identity.hardwareConcurrency", gCurrentIdentity.hardwareConcurrency);
-    Services.prefs.setStringPref("ghost.identity.webGLVendor", gCurrentIdentity.webGLVendor);
-    Services.prefs.setStringPref("ghost.identity.webGLRenderer", gCurrentIdentity.webGLRenderer);
+    Services.prefs.setStringPref("general.useragent.override", gCurrentIdentity.userAgent);
+    Services.prefs.setStringPref("general.platform.override", gCurrentIdentity.platform);
+    Services.prefs.setStringPref("general.oscpu.override", gCurrentIdentity.oscpu);
+    Services.prefs.setIntPref("dom.maxHardwareConcurrency", gCurrentIdentity.hardwareConcurrency);
+    
+    // WebGL overrides (Mullvad/Tor natively respect these if webgl.enable-webgl2 is true)
+    Services.prefs.setStringPref("webgl.override-unmasked-vendor", gCurrentIdentity.webGLVendor);
+    Services.prefs.setStringPref("webgl.override-unmasked-renderer", gCurrentIdentity.webGLRenderer);
   },
 
   getIdentity() {
