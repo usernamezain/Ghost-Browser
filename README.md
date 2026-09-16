@@ -12,7 +12,8 @@ Ghost Browser is currently in **Pre-Alpha**.
 - **Phase 1 (Privacy Core):** Scaffolded (Total Cookie Protection, strict referrers, Arkenfox base, Multi-Profile UI, and High-Contrast Monochromatic Theme implemented in `core/`).
 - **Phase 2 (Ghost Cloak):** Scaffolded (WebGL/Canvas spoofing, Timezone UTC enforcement, Hardware Concurrency spoofing, and Deterministic Profile Identity Generator built in `core/`).
 - **Phase 3 (Theming Engine):** Scaffolded (Offline-First Local Theme Marketplace and strict RFP warning logic integrated).
-- **Phase 4 (DevTools):** Scaffolded (Native Fingerprint Auditor and OSINT Notes Panel added to `core/`).
+- **Phase 4 (DevTools):** Scaffolded (Native Fingerprint Auditor, OSINT Notes Panel, and HAR Exporter added to `core/`).
+- **Phase 5 (Docker Isolation):** Scaffolded (Optional containerized KasmVNC orchestration layer for disposable sessions).
 
 > [!WARNING]
 > This browser is currently undergoing structural changes. Do not use this for critical security or privacy tasks yet. Telemetry and fingerprinting mitigations are being actively ported.
