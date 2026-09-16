@@ -1,6 +1,23 @@
-# Ghost Browser
+<div align="center">
+  <img src="docs/assets/logo.jpg" alt="Ghost Browser Logo" width="200" style="border-radius: 20px;">
+  <h1>Ghost Browser</h1>
+  <p>A free, open-source, privacy-hardened desktop browser built on Gecko (Firefox).</p>
+</div>
 
-A free, open-source, privacy-hardened desktop browser built on Gecko (Firefox) via a Zen Browser fork.
+## 🏗 Architecture
+```mermaid
+graph TD;
+    A[Ghost Browser Core] --> B(Privacy Engine);
+    A --> C(Ghost Cloak Identity);
+    A --> D(Native DevTools);
+    B --> E[Total Cookie Protection];
+    B --> F[Strict Referrers];
+    C --> G[Deterministic Profile Hashes];
+    C --> H[Hardware Concurrency Spoofing];
+    C --> I[WebGL & Canvas Masks];
+    D --> J[HAR Exporter];
+    D --> K[Header Inspector];
+```
 
 Ghost Browser gives you real anti-fingerprinting, multi-profile isolation, and full UI customization without needing five different tools duct-taped together.
 
