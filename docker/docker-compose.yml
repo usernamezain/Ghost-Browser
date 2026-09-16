@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ghost-cloak:
+    build: .
+    container_name: ghost-cloak-session
+    ports:
+      - "8080:8080"
+    shm_size: '2gb'
+    security_opt:
+      - seccomp=unconfined
+    restart: "no"
